@@ -9,7 +9,7 @@ class Cache:
     def __init__(self):
         """constructor"""
         self._redis = redis.Redis()
-        self._redis.flushdb()
+        self._redis.flushdb(True)
 
 
     def store(self, data) -> str:
